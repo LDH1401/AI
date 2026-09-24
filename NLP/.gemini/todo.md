@@ -1,0 +1,31 @@
+# Todo List - Comprehensive NLP Repository (Expanded with Document QA & Document RAG)
+
+- [x] Tạo `requirements.txt` định nghĩa các thư viện NLP sản xuất (`torch`, `transformers`, `datasets`, `evaluate`, `tokenizers`, `scikit-learn`, `nltk`, `spacy`, `pyvi`, `underthesea`, `gensim`, `rank-bm25`, `pypdf`)
+- [x] Xây dựng chuỗi 11 chương tài liệu lý thuyết toàn diện tại `docs/`:
+  - [x] `docs/01_nlp_fundamentals.md`: Bản chất ngôn ngữ tự nhiên, Cú pháp, Ngữ nghĩa, Thử thách NLP & Tiếng Việt
+  - [x] `docs/02_text_preprocessing_and_tokenization.md`: Unicode Normalization, NLTK & spaCy utilities, Lemmatization/Stemming, Tách từ tiếng Việt, Subword Tokenization (BPE, WordPiece, Unigram)
+  - [x] `docs/03_vector_space_models_tfidf_and_word_embeddings.md`: BoW, TF-IDF, Word2Vec (CBOW & Skip-gram với Negative Sampling), GloVe, FastText
+  - [x] `docs/04_sequential_models_rnn_lstm_gru.md`: RNN, Vanishing Gradient, LSTM, GRU, Bi-LSTM, Seq2Seq & Attention Mechanism (Bahdanau/Luong)
+  - [x] `docs/05_transformer_architecture_deep_dive.md`: Scaled Dot-Product Attention, Multi-Head Attention, Positional Encoding, Pre-LN vs Post-LN
+  - [x] `docs/06_bert_and_encoder_models.md`: BERT Architecture, MLM & NSP pre-training, RoBERTa, DeBERTa, PhoBERT (Tiếng Việt)
+  - [x] `docs/07_gpt_and_decoder_autoregressive_models.md`: GPT Causal Attention, Pre-training CLM, Decoding strategies (Greedy, Beam, Temperature, Top-k, Top-p)
+  - [x] `docs/08_core_nlp_tasks.md`: Text Classification, Sentiment Analysis, NER (BIO Tagging), Machine Translation, Question Answering (QA), Summarization
+  - [x] `docs/09_rag_and_llm_fine_tuning.md`: RAG (Chunking, Vector DB, Reranking), PEFT (LoRA, QLoRA 4-bit, NF4), DPO / RLHF
+  - [x] `docs/10_information_theory_mle_in_nlp.md`: Bản chất toán học Information Theory, NLL, Cross-Entropy, KL-Divergence, Perplexity (PPL) trong NLP
+  - [x] `docs/11_document_question_answering.md`: Hỏi đáp trên Tài liệu (Document QA & Document RAG): Extractive QA, Hybrid Search (Dense + BM25), LayoutLMv3 (Layout & Bounding Boxes), Visual Document QA (Donut, Nougat, ColPali), Table QA (TAPAS)
+- [x] Xây dựng Codebase Python chuẩn Production tại `src/`:
+  - [x] `src/config.py`: Configuration Dataclasses cho NLP tasks & Models
+  - [x] `src/tokenizer.py`: Custom Subword / Vietnamese Tokenizer Wrapper
+  - [x] `src/nltk_spacy_utils.py`: Module tích hợp NLTK (Pos Tagging, Stemming, Lemmatization) & spaCy (Dependency Parsing, NER)
+  - [x] `src/dataset.py`: PyTorch Text Dataset & Collate Function (Dynamic Padding & Attention Masking)
+  - [x] `src/metrics.py`: Module tính BLEU, ROUGE, F1-score, Accuracy, Perplexity (PPL), Exact Match (EM)
+  - [x] `src/utils.py`: Utilities cho Text Cleaning, Model Checkpointing
+  - [x] `src/models/wordpiece_bpe_demo.py`: Thuật toán BPE & WordPiece Tokenization viết từ đầu trong Python
+  - [x] `src/models/word2vec_cbow_skipgram.py`: Mô hình Word2Vec (CBOW & Skip-gram với Negative Sampling) bằng PyTorch & Gensim
+  - [x] `src/models/document_qa_rag.py`: Pipeline Hỏi đáp trên Tài liệu (Document QA & Document RAG - Extractive Span QA, Hybrid BM25+Dense Retrieval, LayoutLM Document Understanding)
+  - [x] `src/models/text_classifier.py`: Custom Transformer / BERT Text Classifier Head
+  - [x] `src/models/bert_qa.py`: Extractive Question Answering với BERT/PhoBERT
+  - [x] `src/models/transformer_seq2seq.py`: Encoder-Decoder Transformer cho Dịch máy (NMT)
+  - [x] `src/train.py`: Script huấn luyện NLP PyTorch với Learning Rate Warmup & AdamW
+  - [x] `src/infer.py`: Inference Script cho Classification, QA và Dịch máy
+- [x] Xây dựng `README.md` chính của NLP repository

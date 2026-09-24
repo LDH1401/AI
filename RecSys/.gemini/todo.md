@@ -1,0 +1,26 @@
+# Todo List - Recommendation Systems Repository
+
+- [x] Tạo `requirements.txt` cho RecSys sản xuất (`torch`, `scikit-learn`, `scipy`, `numpy`, `pandas`, `faiss-cpu`, `tqdm`, `pydantic`)
+- [x] Xây dựng 10 chương tài liệu lý thuyết toàn diện tại `docs/`:
+  - [x] `docs/01_recsys_fundamentals_and_paradigms.md`: Tổng quan RecSys, Pipeline 2 giai đoạn (Retrieval vs Ranking), Explicit vs Implicit Feedback, Cold-start & Data Sparsity
+  - [x] `docs/02_collaborative_filtering_and_matrix_factorization.md`: Collaborative Filtering (User-based / Item-based CF), Matrix Factorization (SVD, ALS, BPR Pairwise Loss)
+  - [x] `docs/03_content_based_filtering.md`: Content-based Filtering, Feature Engineering cho Items/Users, TF-IDF VSM, Filter Bubble & Serendipity
+  - [x] `docs/04_deep_learning_recsys_dssm_two_tower.md`: Two-Tower Architecture (Google DSSM), User Tower, Item Tower, In-batch Negative Softmax Loss
+  - [x] `docs/05_wide_and_deep_deep_and_cross.md`: Wide & Deep (Google 2016 - Memorization vs Generalization), Deep & Cross Network (DCN / DCN-v2)
+  - [x] `docs/06_sequential_and_session_based_recommendation.md`: Sequential RecSys (GRU4Rec, SASRec Self-Attention Based Sequential Recommendation)
+  - [x] `docs/07_graph_neural_networks_in_recsys.md`: GNNs trong RecSys (Bipartite User-Item Graph, Message Passing, LightGCN SOTA)
+  - [x] `docs/08_multi_task_and_multi_objective_recommendation.md`: Multi-Task Recommendation (MMOE - Mixture-of-Experts, ESMM - Entire Space Multi-Task Model cho CTR & CVR)
+  - [x] `docs/09_candidate_retrieval_and_approximate_nearest_neighbors.md`: Candidate Retrieval & ANN Search (HNSW, LSH, FAISS IVF-PQ Indexing)
+  - [x] `docs/10_information_theory_mle_and_evaluation_in_recsys.md`: Lý thuyết Thông tin & MLE trong RecSys, Đánh giá Top-K Metrics (Recall@K, Precision@K, Hit Rate@K, MRR@K, NDCG@K)
+- [x] Xây dựng Codebase Python chuẩn Production tại `src/`:
+  - [x] `src/config.py`: Configuration Dataclasses cho RecSys Models & Pipelines
+  - [x] `src/dataset.py`: PyTorch User-Item Interaction Dataset & Negative Sampling DataLoader
+  - [x] `src/metrics.py`: Module tính toán NDCG@K, MRR@K, Recall@K, HitRate@K, Precision@K
+  - [x] `src/utils.py`: Utilities cho FAISS Indexing, Negative Sampling, Checkpointing
+  - [x] `src/models/matrix_factorization.py`: PyTorch Matrix Factorization & BPR (Bayesian Personalized Ranking) Loss
+  - [x] `src/models/two_tower_dssm.py`: PyTorch Two-Tower DSSM Candidate Retrieval Model
+  - [x] `src/models/wide_and_deep.py`: PyTorch Wide & Deep Ranking Model
+  - [x] `src/models/sequential_sasrec.py`: PyTorch SASRec (Self-Attention Sequential Recommendation)
+  - [x] `src/train.py`: Script huấn luyện PyTorch RecSys chuẩn Production
+  - [x] `src/infer.py`: Inference Script cho Retrieval (Two-Tower + FAISS) và Ranking
+- [x] Xây dựng `README.md` chính cho RecSys Repository

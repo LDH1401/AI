@@ -1,0 +1,27 @@
+# Todo List - Advanced Computer Vision Repository
+
+- [x] Tạo `requirements.txt` cho CV sản xuất (`torch`, `torchvision`, `opencv-python`, `pillow`, `transformers`, `ultralytics`, `timm`, `pytesseract`, `easyocr`, `albumentations`, `scikit-image`, `av`)
+- [x] Xây dựng 10 chương tài liệu lý thuyết nâng cao tại `docs/`:
+  - [x] `docs/01_cv_advanced_overview.md`: Tổng quan các bài toán CV nâng cao, phân biệt với Image Classification cơ bản
+  - [x] `docs/02_ocr_text_detection_and_recognition.md`: OCR Pipeline (Text Detection EAST/DBNet, Text Recognition CRNN+CTC/TRBA/TrOCR, OCR-free Donut/Nougat, Preprocessing & Postprocessing)
+  - [x] `docs/03_advanced_object_detection_yolo_detr.md`: Detection nâng cao (YOLOv8-v11, DETR, RT-DETR, Anchor-free, IoU Losses: GIoU/CIoU/DIoU, Soft-NMS)
+  - [x] `docs/04_instance_and_semantic_segmentation_sam.md`: Segmentation nâng cao (Mask R-CNN, SAM / SAM 2 - Segment Anything Model, Multi-mask Prompting)
+  - [x] `docs/05_video_classification_and_action_recognition.md`: Phân loại Video & Nhận dạng Hành động (3D CNNs, C3D, I3D, SlowFast, TimeSformer, ViViT, Sampling strategies)
+  - [x] `docs/06_image_captioning_blip_llava.md`: Mô tả Ảnh (Vision Encoder + Text Decoder, BLIP-2, LLaVA Architecture, Cross-Modal Attention)
+  - [x] `docs/07_video_captioning_architecture.md`: Mô tả Video (3D Feature Extraction + Temporal Attention + Video-LLaVA / Video-ChatGPT)
+  - [x] `docs/08_visual_question_answering_image_vqa.md`: Image VQA (Co-Attention Fusion, Bilinear Pooling, Multi-Modal LLMs: LLaVA, Qwen2-VL)
+  - [x] `docs/09_video_question_answering_video_vqa.md`: Video VQA (Spatial-Temporal Reasoning, Temporal Pooling, Multi-Frame Video VQA)
+  - [x] `docs/10_multimodal_alignment_clip_and_mle.md`: Multi-Modal Alignment (CLIP, InfoNCE Contrastive Loss, Zero-shot Classification, Vision-Language MLE)
+- [x] Xây dựng Codebase Python chuẩn Production tại `src/`:
+  - [x] `src/config.py`: Configuration Dataclasses cho CV Models & Pipelines
+  - [x] `src/dataset.py`: PyTorch Image & Video Dataset with Albumentations Data Augmentations
+  - [x] `src/metrics.py`: Module tính mAP@0.5:0.95, IoU, CIDEr, BLEU-4, ROUGE-L, Word Accuracy cho OCR
+  - [x] `src/utils.py`: Tiện ích Bounding Box conversions (xyxy to xywh), NMS, Video Frame Sampler
+  - [x] `src/models/ocr_pipeline.py`: Production OCR Pipeline (EasyOCR / TrOCR / DBNet)
+  - [x] `src/models/yolo_detr_detector.py`: Object Detection Pipeline (YOLOv8/v11 & RT-DETR Wrapper)
+  - [x] `src/models/video_classifier_3d.py`: Video Action Classifier (3D ResNet / Conv3D Model)
+  - [x] `src/models/image_captioning_blip.py`: Image Captioning Pipeline sử dụng BLIP / Pretrained Hugging Face
+  - [x] `src/models/visual_qa_llava.py`: Visual Question Answering (VQA) Pipeline với Multimodal VLM (BLIP-VQA)
+  - [x] `src/train.py`: Script huấn luyện PyTorch CV chuẩn Production
+  - [x] `src/infer.py`: Inference Script cho OCR, Object Detection, Video Classification & VQA
+- [x] Xây dựng `README.md` chính cho Advanced CV Repository

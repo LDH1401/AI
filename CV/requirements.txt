@@ -1,0 +1,22 @@
+# Production dependencies for Advanced Computer Vision (CV) repository
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+transformers>=4.30.0
+datasets>=2.12.0
+evaluate>=0.4.0
+timm>=0.9.0
+ultralytics>=8.0.0
+opencv-python>=4.7.0
+pillow>=9.5.0
+albumentations>=1.3.0
+scikit-image>=0.20.0
+scikit-learn>=1.2.0
+scipy>=1.10.0
+numpy>=1.24.0
+av>=10.0.0
+pytesseract>=0.3.10
+easyocr>=1.7.0
+matplotlib>=3.7.0
+tqdm>=4.65.0
+pydantic>=2.0.0

@@ -1,0 +1,25 @@
+# Todo List - Reinforcement Learning Repository
+
+- [x] Tạo `requirements.txt` cho RL sản xuất (`torch`, `gymnasium`, `numpy`, `scipy`, `scikit-learn`, `matplotlib`, `tqdm`, `pydantic`)
+- [x] Xây dựng 10 chương tài liệu lý thuyết toàn diện tại `docs/`:
+  - [x] `docs/01_rl_fundamentals_and_mdp.md`: Tổng quan RL, Tương tác Agent-Environment, Markov Decision Process (MDP), Policy, Value Functions & Phương trình Bellman
+  - [x] `docs/02_value_based_methods_q_learning_dqn.md`: Model-Free Value-Based RL, TD Learning, Q-Learning, Deep Q-Networks (DQN, Double DQN, Dueling DQN, Experience Replay, Target Network)
+  - [x] `docs/03_policy_gradient_methods_reinforce.md`: Policy-Based RL, Policy Gradient Theorem, REINFORCE Algorithm (Monte Carlo Policy Gradient)
+  - [x] `docs/04_actor_critic_architectures_a2c_a3c.md`: Actor-Critic Framework, Advantage Function A(s,a), A2C (Advantage Actor-Critic) & A3C (Asynchronous Actor-Critic)
+  - [x] `docs/05_proximal_policy_optimization_ppo.md`: Proximal Policy Optimization (PPO), Clipped Surrogate Objective Loss, Probability Ratio, GAE (Generalized Advantage Estimation)
+  - [x] `docs/06_continuous_action_spaces_ddpg_td3.md`: RL trên Không gian Hành động Liên tục, DDPG (Deep Deterministic Policy Gradient), TD3 (Twin Delayed DDPG)
+  - [x] `docs/07_soft_actor_critic_sac_maximum_entropy_rl.md`: Maximum Entropy RL Framework, Soft Actor-Critic (SAC SOTA), Automatic Temperature Tuning
+  - [x] `docs/08_model_based_reinforcement_learning.md`: Model-Free vs Model-Based RL, World Models, Planning (MCTS, AlphaZero, MPC, Dreamer)
+  - [x] `docs/09_multi_agent_reinforcement_learning_marl.md`: Multi-Agent RL (MARL), Centralized Training with Decentralized Execution (CTDE), MADDPG, QMIX
+  - [x] `docs/10_information_theory_mle_and_rlhf_in_rl.md`: Lý thuyết Thông tin & Maximum Entropy RL dưới góc nhìn Boltzmann/MLE, RLHF (Reinforcement Learning from Human Feedback), Reward Modeling (Bradley-Terry Loss) & PPO KL Penalty
+- [x] Xây dựng Codebase Python chuẩn Production tại `src/`:
+  - [x] `src/config.py`: Configuration Dataclasses cho RL Agents, Environments & Hyperparameters
+  - [x] `src/replay_buffer.py`: Uniform Replay Buffer & Prioritized Experience Replay (PER) cho PyTorch
+  - [x] `src/metrics.py`: Module tính toán Episode Rewards, Average Returns, Policy Entropy, Q-value Losses
+  - [x] `src/utils.py`: Utilities cho Environment Wrappers, Seed setting, Checkpointing
+  - [x] `src/models/dqn_agent.py`: PyTorch Deep Q-Network (DQN / Double DQN / Dueling DQN) Agent
+  - [x] `src/models/ppo_agent.py`: PyTorch Proximal Policy Optimization (PPO) Agent với GAE
+  - [x] `src/models/sac_agent.py`: PyTorch Soft Actor-Critic (SAC) Agent cho Continuous Control
+  - [x] `src/train.py`: Script huấn luyện PyTorch RL Agent chuẩn Production trên Gymnasium Environments
+  - [x] `src/infer.py`: Inference Script cho Rollout Evaluation của RL Agents
+- [x] Xây dựng `README.md` chính cho RL Repository
